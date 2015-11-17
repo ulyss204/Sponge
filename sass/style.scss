@@ -1,0 +1,248 @@
+@import "_normalize";
+$bt: #ff002a;
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+body{
+	margin: 0 auto;
+	#wrapper{
+		header{
+			background-color: #2f2f2f;
+			width: 100%;
+			height: 90px;
+			display: inline-block;
+			.color{
+				width: 100%;
+				height: 50%;
+				background-color: #363636;
+			}
+			.age{
+				background: url(images/age.png) no-repeat;
+				width: 65px;
+				height: 65px;
+				margin-top: -32px;
+    			float: left;
+    			position: relative;
+    			margin-left: 3%;
+				span{
+					position: absolute;
+				    top: 28%;
+				    left: 20%;
+				    font-size: 25px;
+				    color: #fff;
+				}
+			}
+			a{
+			    margin-left: 24%;
+			    position: relative;
+			    top: -25px;
+			    text-decoration: none;
+				span{
+						text-transform: uppercase;
+						text-transform: uppercase;
+					    font-size: 30px;
+					    color: #fff;
+					    margin-right: 8px;
+					}
+				.tube{
+					@include border-radius(20px);
+					background-color: #ffffff;
+					color: $bt;
+
+				    display: inline-block;
+				    font-size: 30px;
+				    width: 80px;
+				    height: 45px;
+				    text-align: center;
+				    padding-top: 10px;
+				}
+			}
+		}
+		main{
+			background: #000;
+			width: 100%;
+			overflow: auto;
+			height: 73%;
+			.sponge{
+				background: url(images/sponge.png) no-repeat;
+				width: 98%;
+				margin: 1% 1%;
+				height: 665px;
+				opacity: 0.7;
+				background-position: center;
+    			background-size: cover;
+				header{
+					background-color: #000;
+					opacity: 0.5;
+					p{
+						color: #fff;
+						font-size: 30px;
+					    display: inline-block;
+					    float: left;
+					    margin-left: 6%;
+					}
+					ul{
+						float: right;
+						position: relative;
+						margin-right: 14%;
+    					a{
+    						margin-left: 0;
+							.time{
+								background: url(images/time.png) no-repeat;
+								width: 45px;
+								height: 45px;
+								float: left;
+								display: inline-block;
+								margin-right: 50%;
+							}
+						}
+						a{
+    						margin-left: 0;
+						
+							.atom{
+								background: url(images/atom.png) no-repeat;
+								width: 41px;
+								height: 47px;
+								display: inline-block;
+								position: absolute;
+    							top: 24px;
+							}
+						}
+					}
+				}
+				button{
+					@include border-radius(32px);
+					background-color: $bt;
+					color: #ffffff;
+					margin-top: 35%;
+				    margin-right: 10%;
+				    border-color: #ff002a;
+				    font-size: 315%;
+				    padding-top: 13px;
+				    max-width: 450px;
+				    min-width: 225px;
+				    width: 71%;
+				    padding-bottom: 8px;
+				    height: 170px;
+				    margin-left: 14%;
+				    margin-bottom: 1%;
+					div{
+						background: url(images/bt.png) no-repeat;
+						min-height: 48px;
+					    float: right;
+					    min-width: 44px;
+					    margin-right: 13%;
+					    margin-top: -1%;
+					    background-size: cover;
+					    width: 16%;
+					    padding-bottom: 7%;
+					    padding-right: 0%;
+					}
+				}
+				p{
+					text-align: center;
+					color: #bababa;
+					margin-bottom: 7%;
+				}
+				a{
+					text-decoration: none;
+					.cancel{
+						@include border-radius(5px);
+						background-color: #000;
+						opacity: 0.5;
+						color: #ffffff;
+						border: 1px solid;
+					    text-align: center;
+					    width: 20%;
+					    min-width: 67px;
+					    height: 43px;
+					    padding-top: 12px;
+					    margin-left: 40%;
+					    color: #fff;
+					    font-size: 159%;
+					    float: left;
+					}
+				}
+			}
+			footer{
+				overflow: auto;
+				background-color: #000;
+				.grey{
+					width: 100%;
+					height: 3px;
+					color: #626262;
+					@include border-radius(5px);
+					.red{
+						@include border-radius(5px);
+						width: 25%;
+						height: 3px;
+						color: #ec0622;
+					}
+				}
+				ul{
+					margin-left: 2%;
+					position: relative;
+					.play{
+						background: url(images/play.png) no-repeat;
+						width: 41px;
+					    height: 45px;
+					    display: inline-block;
+					    margin-right: 4%;
+					}
+					.volume{
+						background: url(images/volume.png) no-repeat;
+						display: inline-block;
+					    width: 45px;
+					    height: 45px;
+					}
+					.sec{
+						margin-left: 9%;
+					    display: inline-block;
+					    position: absolute;
+					    top: 30%;
+					    width: 100px;
+					}
+					.screen{
+						background: url(images/screen.png) no-repeat;
+						display: inline-block;
+					    width: 55px;
+					    height: 45px;
+					    float: right;
+    					margin-right: 5%;
+					}
+				}
+			}
+		}
+		footer{
+			width: 100%;
+			height: 15.5%;
+			background-color: #2f2f2f;
+			    overflow: auto;
+			.check{
+				width: 30px;
+				height: 30px;
+				border: 1px solid #000;
+				background-color: #ffffff;
+				float: left;
+				margin-left: 5%;
+			    margin-top: 5%;
+			    margin-right: 5%;
+			}
+			p{
+				color: #4e4e4e;
+				a{
+					span{
+
+					}
+				}
+			}
+			.domain{
+				width: 100%;
+				color: #4e4e4e;
+			}
+		}
+	}
+}
