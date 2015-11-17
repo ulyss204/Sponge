@@ -15,6 +15,7 @@
  * 3. Corrects text resizing oddly in IE 6/7 when body `font-size` is set using
  *  `em` units.
  */
+@import url(https://fonts.googleapis.com/css?family=Roboto:300,400,500);
 html {
   font-family: sans-serif;
   /* 1 */
@@ -369,7 +370,9 @@ th {
   padding: 0; }
 
 body {
-  margin: 0 auto; }
+  margin: 0 auto;
+  width: 640px;
+  font-family: 'Roboto', sans-serif; }
   body #wrapper header {
     background-color: #2f2f2f;
     width: 100%;
@@ -403,7 +406,8 @@ body {
         text-transform: uppercase;
         font-size: 30px;
         color: #fff;
-        margin-right: 8px; }
+        margin-right: 8px;
+        font-weight: 300; }
       body #wrapper header a .tube {
         -webkit-border-radius: 20px;
         -moz-border-radius: 20px;
@@ -416,7 +420,8 @@ body {
         width: 80px;
         height: 45px;
         text-align: center;
-        padding-top: 10px; }
+        padding-top: 10px;
+        font-weight: 600; }
   body #wrapper main {
     background: #000;
     width: 100%;
@@ -438,7 +443,8 @@ body {
           font-size: 30px;
           display: inline-block;
           float: left;
-          margin-left: 6%; }
+          margin-left: 6%;
+          font-weight: 400; }
         body #wrapper main .sponge header ul {
           float: right;
           position: relative;
@@ -479,7 +485,8 @@ body {
         padding-bottom: 8px;
         height: 170px;
         margin-left: 14%;
-        margin-bottom: 1%; }
+        margin-bottom: 1%;
+        font-weight: 500; }
         body #wrapper main .sponge button div {
           background: url(images/bt.png) no-repeat;
           min-height: 48px;
@@ -494,7 +501,8 @@ body {
       body #wrapper main .sponge p {
         text-align: center;
         color: #bababa;
-        margin-bottom: 7%; }
+        margin-bottom: 7%;
+        font-weight: 400; }
       body #wrapper main .sponge a {
         text-decoration: none; }
         body #wrapper main .sponge a .cancel {
@@ -514,18 +522,20 @@ body {
           margin-left: 40%;
           color: #fff;
           font-size: 159%;
-          float: left; }
+          float: left;
+          font-weight: 400; }
     body #wrapper main footer {
       overflow: auto;
       background-color: #000; }
       body #wrapper main footer .grey {
-        width: 100%;
+        width: 98%;
         height: 3px;
-        color: #626262;
+        background-color: #626262;
         -webkit-border-radius: 5px;
         -moz-border-radius: 5px;
         -ms-border-radius: 5px;
-        border-radius: 5px; }
+        border-radius: 5px;
+        margin-left: 6px; }
         body #wrapper main footer .grey .red {
           -webkit-border-radius: 5px;
           -moz-border-radius: 5px;
@@ -533,7 +543,7 @@ body {
           border-radius: 5px;
           width: 25%;
           height: 3px;
-          color: #ec0622; }
+          background-color: #ec0622; }
       body #wrapper main footer ul {
         margin-left: 2%;
         position: relative; }
@@ -553,7 +563,8 @@ body {
           display: inline-block;
           position: absolute;
           top: 30%;
-          width: 100px; }
+          width: 100px;
+          color: #626262; }
         body #wrapper main footer ul .screen {
           background: url(images/screen.png) no-repeat;
           display: inline-block;
@@ -567,18 +578,30 @@ body {
     background-color: #2f2f2f;
     overflow: auto; }
     body #wrapper footer .check {
-      width: 30px;
-      height: 30px;
-      border: 1px solid #000;
+      width: 32px;
+      height: 32px;
+      border: 3px solid #000;
       background-color: #ffffff;
       float: left;
       margin-left: 5%;
       margin-top: 5%;
-      margin-right: 5%; }
+      margin-right: 5%;
+      margin-bottom: 7%; }
     body #wrapper footer p {
-      color: #4e4e4e; }
+      color: #757575;
+      font-weight: 400;
+      font-size: 24px;
+      width: 93%; }
+      body #wrapper footer p a {
+        color: #fff; }
+        body #wrapper footer p a span {
+          margin-left: 10px; }
     body #wrapper footer .domain {
       width: 100%;
-      color: #4e4e4e; }
+      color: #757575;
+      font-weight: 400;
+      font-size: 24px;
+      margin-left: 3%;
+      width: 95%; }
 
 /*# sourceMappingURL=style.css.map */
