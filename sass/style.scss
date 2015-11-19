@@ -1,6 +1,19 @@
 @import "_normalize";
 @import url(https://fonts.googleapis.com/css?family=Roboto:300,400,500);
 $bt: #ff002a;
+$medium: 540px;
+$small: 450px;
+$vsmall:320px;
+@mixin medium-size {
+  @media (min-width: #{$small}) and (max-width: #{$medium - 1px}) {
+    @content;
+  }
+}
+@mixin small-size {
+  @media (min-width: #{$vsmall}) and (max-width: #{$small - 1px}) {
+    @content;
+  }
+}
 @mixin border-radius($radius) {
   -webkit-border-radius: $radius;
      -moz-border-radius: $radius;
@@ -9,7 +22,7 @@ $bt: #ff002a;
 }
 body{
 	margin: 0 auto;
-	width: 640px;
+	max-width: 640px;
 	font-family: 'Roboto', sans-serif;
 	#wrapper{
 		header{
@@ -30,12 +43,21 @@ body{
     			float: left;
     			position: relative;
     			margin-left: 3%;
+    			@include small-size{
+    				background: url(images/age1.png) no-repeat;
+    				margin-top: -22px;
+    			}
 				span{
 					position: absolute;
 				    top: 28%;
 				    left: 20%;
 				    font-size: 25px;
 				    color: #fff;
+				    @include small-size{
+				    	top: 19%;
+					    left: 15%;
+					    font-size: 17px;
+				    }
 				}
 			}
 			a{
@@ -46,26 +68,48 @@ body{
 			    left: calc(50% - 29vw);
 			    .a{
 			    	float: left;
+			    	margin-left: 24%;
+    				margin-top: -5%;
+    				@include medium-size{
+    					margin-left: 17%;
+    				}
+    				@include small-size{
+    					margin-left: 15%;
+    				}
 					span{
-							
+							@include medium-size{
+								font-size: 25px;
+							}
+							@include small-size{
+								font-size: 20px;
+							}
 							text-transform: uppercase;
-						    font-size: 5vw;
+						    font-size: 32px;
 						    color: #fff;
-						    margin-right: 1vw;
+						    margin-right: 8px;
 						    font-weight: 300;
 						}
 					.tube{
 						@include border-radius(20px);
 						background-color: #ffffff;
 						color: $bt;
-
-					    display: inline-block;
-					    font-size: 5vw;
-					    width: 14vw;
-					    height: 13vh;
+						display: inline-block;
+					    font-size: 36px;
+					    width: 93px;
+					    height: 49px;
 					    text-align: center;
-					    padding-top: 2vh;
+					    padding-top: 8px;
 					    font-weight: 600;
+						@include medium-size{
+							width: 79px;
+			    			height: 41px;
+			    			font-size: 25px;
+						}
+					    @include small-size{
+					    	width: 65px;
+			    			height: 32px;
+			    			font-size: 20px;
+					    }
 					}
 				}
 			}
@@ -91,12 +135,19 @@ body{
 					opacity: 0.5;
 					p{
 						color: #fff;
-						font-size: 5vw;
+						font-size: 31px;
 					    display: inline-block;
 					    float: left;
 					    margin-left: 6%;
 					    font-weight: 400;
-					    margin-top: 9vh;
+					    margin-top: 7vh;
+					    @include medium-size{
+					    	font-size: 25px;
+					    }
+					    @include small-size{
+					    	font-size: 20px;
+					    }
+
 					}
 					ul{
 						float: right;
@@ -110,11 +161,14 @@ body{
 								height: 45px;
 								float: left;
 								display: inline-block;
-								margin-right: 50%;
+								margin-right: 40%;
 								background-size: cover;
 							    -webkit-background-size:cover;
 				    			-o-background-size:cover;
 				    			-moz-background-size:cover;
+				    			@include small-size{
+				    				background: url(images/time1.png) no-repeat;
+				    			}
 							}
 						}
 						a{
@@ -131,6 +185,9 @@ body{
 							    -webkit-background-size:cover;
 				    			-o-background-size:cover;
 				    			-moz-background-size:cover;
+				    			@include small-size{
+				    				background: url(images/atom1.png) no-repeat;
+				    			}
 							}
 						}
 					}
@@ -138,35 +195,29 @@ body{
 				button{
 					@include border-radius(32px);
 					background-color: $bt;
-					color: #ffffff;
-				    
+					background-repeat: no-repeat;
+				    background-image: url(images/bt.png);
 				    border-color: #ff002a;
-				    font-size: 7vw;
-				    padding-top: 3vh;
 				    max-width: 450px;
 				    min-width: 225px;
 				    width: 71vw;
-				    padding-bottom: 2vh;
+				    
 				    height: 50vh;
 				    
-				    margin: 40% auto 1%;
-				    font-weight: 500;
+				    margin: 30% auto 1%;
+				    background-position: 44%;
 				    display: block;
-					div{
-						background: url(images/bt.png) no-repeat;
-						min-height: 48px;
-					    float: right;
-					    min-width: 44px;
-					    margin-right: 13%;
-					    margin-top: -1%;
-					    background-size: cover;
-					    -webkit-background-size:cover;
-		    			-o-background-size:cover;
-		    			-moz-background-size:cover;
-					    width: 11vh;
-					    padding-bottom: 9.5vh;
-					    padding-right: 1px;
-					}
+				    @include medium-size{
+				    	background-image: url(images/bt2.png);
+				    	height: 40vh;
+				    	background-position: 50%;
+				    }
+				    @include small-size{
+				    	height: 33vh;
+				    	background-image: url(images/bt1.png);
+				    	background-position: 60%;
+				    	margin-top: 55%;
+				    }
 				}
 				p{
 					text-align: center;
@@ -189,9 +240,14 @@ body{
 					    padding-top: 12px;
 					    margin-left: 40%;
 					    color: #fff;
-					    font-size: 4vw;
+					    font-size: 23px;
 					    float: left;
 					    font-weight: 400;
+					    @include small-size{
+					    	width: 23%;
+							font-size: 19px;
+							height: 36px;
+					    }
 					}
 				}
 			}
@@ -220,12 +276,18 @@ body{
 					    height: 45px;
 					    display: inline-block;
 					    margin-right: 4%;
+					    @include small-size{
+				    		background: url(images/play1.png) no-repeat;
+				    	}
 					}
 					.volume{
 						background: url(images/volume.png) no-repeat;
 						display: inline-block;
 					    width: 45px;
 					    height: 45px;
+					    @include small-size{
+				    		background: url(images/volume1.png) no-repeat;
+				    	}
 					}
 					.sec{
 						margin-left: 9%;
@@ -242,6 +304,9 @@ body{
 					    height: 45px;
 					    float: right;
     					margin-right: 5%;
+    					@include small-size{
+				    		background: url(images/screen1.png) no-repeat;
+				    	}
 					}
 				}
 			}
@@ -261,7 +326,10 @@ body{
 				margin-left: 5%;
 			    margin-top: 5%;
 			    margin-right: 5%;
-			    margin-bottom: 7%;
+			    margin-bottom: 11%;
+			    @include small-size{
+			    	margin-bottom: 6%;
+			    }
 
 			}
 			#check1{
@@ -276,8 +344,12 @@ body{
 			p{
 				color: #757575;
 				font-weight: 400;
-				font-size: 4vw;
+				font-size: 24px;
 				width: 93%;
+				margin-left: 3%;
+				@include small-size{
+					font-size: 14px;
+				}
 				a{
 					color: #fff;
 					span{
@@ -289,9 +361,12 @@ body{
 				width: 100%;
 				color: #757575;
 				font-weight: 400;
-				font-size: 4vw;
+				font-size: 24px;
 				margin-left: 3%;
     			width: 95%;
+    			@include small-size{
+    				font-size: 14px;
+    			}
 			}
 		}
 	}

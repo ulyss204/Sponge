@@ -371,7 +371,7 @@ th {
 
 body {
   margin: 0 auto;
-  width: 640px;
+  max-width: 640px;
   font-family: 'Roboto', sans-serif; }
   body #wrapper header {
     background-color: #2f2f2f;
@@ -390,12 +390,21 @@ body {
       float: left;
       position: relative;
       margin-left: 3%; }
+      @media (min-width: 320px) and (max-width: 449px) {
+        body #wrapper header .age {
+          background: url(images/age1.png) no-repeat;
+          margin-top: -22px; } }
       body #wrapper header .age span {
         position: absolute;
         top: 28%;
         left: 20%;
         font-size: 25px;
         color: #fff; }
+        @media (min-width: 320px) and (max-width: 449px) {
+          body #wrapper header .age span {
+            top: 19%;
+            left: 15%;
+            font-size: 17px; } }
     body #wrapper header a {
       margin-left: 24%;
       position: relative;
@@ -403,13 +412,27 @@ body {
       text-decoration: none;
       left: calc(50% - 29vw); }
       body #wrapper header a .a {
-        float: left; }
+        float: left;
+        margin-left: 24%;
+        margin-top: -5%; }
+        @media (min-width: 450px) and (max-width: 539px) {
+          body #wrapper header a .a {
+            margin-left: 17%; } }
+        @media (min-width: 320px) and (max-width: 449px) {
+          body #wrapper header a .a {
+            margin-left: 15%; } }
         body #wrapper header a .a span {
           text-transform: uppercase;
-          font-size: 5vw;
+          font-size: 32px;
           color: #fff;
-          margin-right: 1vw;
+          margin-right: 8px;
           font-weight: 300; }
+          @media (min-width: 450px) and (max-width: 539px) {
+            body #wrapper header a .a span {
+              font-size: 25px; } }
+          @media (min-width: 320px) and (max-width: 449px) {
+            body #wrapper header a .a span {
+              font-size: 20px; } }
         body #wrapper header a .a .tube {
           -webkit-border-radius: 20px;
           -moz-border-radius: 20px;
@@ -418,12 +441,22 @@ body {
           background-color: #ffffff;
           color: #ff002a;
           display: inline-block;
-          font-size: 5vw;
-          width: 14vw;
-          height: 13vh;
+          font-size: 36px;
+          width: 93px;
+          height: 49px;
           text-align: center;
-          padding-top: 2vh;
+          padding-top: 8px;
           font-weight: 600; }
+          @media (min-width: 450px) and (max-width: 539px) {
+            body #wrapper header a .a .tube {
+              width: 79px;
+              height: 41px;
+              font-size: 25px; } }
+          @media (min-width: 320px) and (max-width: 449px) {
+            body #wrapper header a .a .tube {
+              width: 65px;
+              height: 32px;
+              font-size: 20px; } }
   body #wrapper main {
     background: #000;
     width: 100%;
@@ -445,12 +478,18 @@ body {
         opacity: 0.5; }
         body #wrapper main .sponge header p {
           color: #fff;
-          font-size: 5vw;
+          font-size: 31px;
           display: inline-block;
           float: left;
           margin-left: 6%;
           font-weight: 400;
-          margin-top: 9vh; }
+          margin-top: 7vh; }
+          @media (min-width: 450px) and (max-width: 539px) {
+            body #wrapper main .sponge header p {
+              font-size: 25px; } }
+          @media (min-width: 320px) and (max-width: 449px) {
+            body #wrapper main .sponge header p {
+              font-size: 20px; } }
         body #wrapper main .sponge header ul {
           float: right;
           position: relative;
@@ -463,11 +502,14 @@ body {
               height: 45px;
               float: left;
               display: inline-block;
-              margin-right: 50%;
+              margin-right: 40%;
               background-size: cover;
               -webkit-background-size: cover;
               -o-background-size: cover;
               -moz-background-size: cover; }
+              @media (min-width: 320px) and (max-width: 449px) {
+                body #wrapper main .sponge header ul a .time {
+                  background: url(images/time1.png) no-repeat; } }
           body #wrapper main .sponge header ul a {
             margin-left: 0; }
             body #wrapper main .sponge header ul a .atom {
@@ -481,38 +523,36 @@ body {
               -webkit-background-size: cover;
               -o-background-size: cover;
               -moz-background-size: cover; }
+              @media (min-width: 320px) and (max-width: 449px) {
+                body #wrapper main .sponge header ul a .atom {
+                  background: url(images/atom1.png) no-repeat; } }
       body #wrapper main .sponge button {
         -webkit-border-radius: 32px;
         -moz-border-radius: 32px;
         -ms-border-radius: 32px;
         border-radius: 32px;
         background-color: #ff002a;
-        color: #ffffff;
+        background-repeat: no-repeat;
+        background-image: url(images/bt.png);
         border-color: #ff002a;
-        font-size: 7vw;
-        padding-top: 3vh;
         max-width: 450px;
         min-width: 225px;
         width: 71vw;
-        padding-bottom: 2vh;
         height: 50vh;
-        margin: 40% auto 1%;
-        font-weight: 500;
+        margin: 30% auto 1%;
+        background-position: 44%;
         display: block; }
-        body #wrapper main .sponge button div {
-          background: url(images/bt.png) no-repeat;
-          min-height: 48px;
-          float: right;
-          min-width: 44px;
-          margin-right: 13%;
-          margin-top: -1%;
-          background-size: cover;
-          -webkit-background-size: cover;
-          -o-background-size: cover;
-          -moz-background-size: cover;
-          width: 11vh;
-          padding-bottom: 9.5vh;
-          padding-right: 1px; }
+        @media (min-width: 450px) and (max-width: 539px) {
+          body #wrapper main .sponge button {
+            background-image: url(images/bt2.png);
+            height: 40vh;
+            background-position: 50%; } }
+        @media (min-width: 320px) and (max-width: 449px) {
+          body #wrapper main .sponge button {
+            height: 33vh;
+            background-image: url(images/bt1.png);
+            background-position: 60%;
+            margin-top: 55%; } }
       body #wrapper main .sponge p {
         text-align: center;
         color: #bababa;
@@ -536,9 +576,14 @@ body {
           padding-top: 12px;
           margin-left: 40%;
           color: #fff;
-          font-size: 4vw;
+          font-size: 23px;
           float: left;
           font-weight: 400; }
+          @media (min-width: 320px) and (max-width: 449px) {
+            body #wrapper main .sponge a .cancel {
+              width: 23%;
+              font-size: 19px;
+              height: 36px; } }
     body #wrapper main footer {
       overflow: auto;
       background-color: #000; }
@@ -568,11 +613,17 @@ body {
           height: 45px;
           display: inline-block;
           margin-right: 4%; }
+          @media (min-width: 320px) and (max-width: 449px) {
+            body #wrapper main footer ul .play {
+              background: url(images/play1.png) no-repeat; } }
         body #wrapper main footer ul .volume {
           background: url(images/volume.png) no-repeat;
           display: inline-block;
           width: 45px;
           height: 45px; }
+          @media (min-width: 320px) and (max-width: 449px) {
+            body #wrapper main footer ul .volume {
+              background: url(images/volume1.png) no-repeat; } }
         body #wrapper main footer ul .sec {
           margin-left: 9%;
           display: inline-block;
@@ -587,6 +638,9 @@ body {
           height: 45px;
           float: right;
           margin-right: 5%; }
+          @media (min-width: 320px) and (max-width: 449px) {
+            body #wrapper main footer ul .screen {
+              background: url(images/screen1.png) no-repeat; } }
   body #wrapper footer {
     width: 100%;
     height: 15.5%;
@@ -602,7 +656,10 @@ body {
       margin-left: 5%;
       margin-top: 5%;
       margin-right: 5%;
-      margin-bottom: 7%; }
+      margin-bottom: 11%; }
+      @media (min-width: 320px) and (max-width: 449px) {
+        body #wrapper footer #check {
+          margin-bottom: 6%; } }
     body #wrapper footer #check1 {
       background: url(images/check.png) no-repeat;
       position: absolute;
@@ -614,8 +671,12 @@ body {
     body #wrapper footer p {
       color: #757575;
       font-weight: 400;
-      font-size: 4vw;
-      width: 93%; }
+      font-size: 24px;
+      width: 93%;
+      margin-left: 3%; }
+      @media (min-width: 320px) and (max-width: 449px) {
+        body #wrapper footer p {
+          font-size: 14px; } }
       body #wrapper footer p a {
         color: #fff; }
         body #wrapper footer p a span {
@@ -624,8 +685,11 @@ body {
       width: 100%;
       color: #757575;
       font-weight: 400;
-      font-size: 4vw;
+      font-size: 24px;
       margin-left: 3%;
       width: 95%; }
+      @media (min-width: 320px) and (max-width: 449px) {
+        body #wrapper footer .domain {
+          font-size: 14px; } }
 
 /*# sourceMappingURL=style.css.map */
