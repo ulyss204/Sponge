@@ -400,28 +400,30 @@ body {
       margin-left: 24%;
       position: relative;
       top: -25px;
-      text-decoration: none; }
-      body #wrapper header a span {
-        text-transform: uppercase;
-        text-transform: uppercase;
-        font-size: 30px;
-        color: #fff;
-        margin-right: 8px;
-        font-weight: 300; }
-      body #wrapper header a .tube {
-        -webkit-border-radius: 20px;
-        -moz-border-radius: 20px;
-        -ms-border-radius: 20px;
-        border-radius: 20px;
-        background-color: #ffffff;
-        color: #ff002a;
-        display: inline-block;
-        font-size: 30px;
-        width: 80px;
-        height: 45px;
-        text-align: center;
-        padding-top: 10px;
-        font-weight: 600; }
+      text-decoration: none;
+      left: calc(50% - 29vw); }
+      body #wrapper header a .a {
+        float: left; }
+        body #wrapper header a .a span {
+          text-transform: uppercase;
+          font-size: 5vw;
+          color: #fff;
+          margin-right: 1vw;
+          font-weight: 300; }
+        body #wrapper header a .a .tube {
+          -webkit-border-radius: 20px;
+          -moz-border-radius: 20px;
+          -ms-border-radius: 20px;
+          border-radius: 20px;
+          background-color: #ffffff;
+          color: #ff002a;
+          display: inline-block;
+          font-size: 5vw;
+          width: 14vw;
+          height: 13vh;
+          text-align: center;
+          padding-top: 2vh;
+          font-weight: 600; }
   body #wrapper main {
     background: #000;
     width: 100%;
@@ -434,17 +436,21 @@ body {
       height: 665px;
       opacity: 0.7;
       background-position: center;
-      background-size: cover; }
+      background-size: cover;
+      -webkit-background-size: cover;
+      -o-background-size: cover;
+      -moz-background-size: cover; }
       body #wrapper main .sponge header {
         background-color: #000;
         opacity: 0.5; }
         body #wrapper main .sponge header p {
           color: #fff;
-          font-size: 30px;
+          font-size: 5vw;
           display: inline-block;
           float: left;
           margin-left: 6%;
-          font-weight: 400; }
+          font-weight: 400;
+          margin-top: 9vh; }
         body #wrapper main .sponge header ul {
           float: right;
           position: relative;
@@ -457,7 +463,11 @@ body {
               height: 45px;
               float: left;
               display: inline-block;
-              margin-right: 50%; }
+              margin-right: 50%;
+              background-size: cover;
+              -webkit-background-size: cover;
+              -o-background-size: cover;
+              -moz-background-size: cover; }
           body #wrapper main .sponge header ul a {
             margin-left: 0; }
             body #wrapper main .sponge header ul a .atom {
@@ -466,7 +476,11 @@ body {
               height: 47px;
               display: inline-block;
               position: absolute;
-              top: 24px; }
+              top: 24px;
+              background-size: cover;
+              -webkit-background-size: cover;
+              -o-background-size: cover;
+              -moz-background-size: cover; }
       body #wrapper main .sponge button {
         -webkit-border-radius: 32px;
         -moz-border-radius: 32px;
@@ -474,19 +488,17 @@ body {
         border-radius: 32px;
         background-color: #ff002a;
         color: #ffffff;
-        margin-top: 35%;
-        margin-right: 10%;
         border-color: #ff002a;
-        font-size: 315%;
-        padding-top: 13px;
+        font-size: 7vw;
+        padding-top: 3vh;
         max-width: 450px;
         min-width: 225px;
-        width: 71%;
-        padding-bottom: 8px;
-        height: 170px;
-        margin-left: 14%;
-        margin-bottom: 1%;
-        font-weight: 500; }
+        width: 71vw;
+        padding-bottom: 2vh;
+        height: 50vh;
+        margin: 40% auto 1%;
+        font-weight: 500;
+        display: block; }
         body #wrapper main .sponge button div {
           background: url(images/bt.png) no-repeat;
           min-height: 48px;
@@ -495,9 +507,12 @@ body {
           margin-right: 13%;
           margin-top: -1%;
           background-size: cover;
-          width: 16%;
-          padding-bottom: 7%;
-          padding-right: 0%; }
+          -webkit-background-size: cover;
+          -o-background-size: cover;
+          -moz-background-size: cover;
+          width: 11vh;
+          padding-bottom: 9.5vh;
+          padding-right: 1px; }
       body #wrapper main .sponge p {
         text-align: center;
         color: #bababa;
@@ -521,7 +536,7 @@ body {
           padding-top: 12px;
           margin-left: 40%;
           color: #fff;
-          font-size: 159%;
+          font-size: 4vw;
           float: left;
           font-weight: 400; }
     body #wrapper main footer {
@@ -576,10 +591,11 @@ body {
     width: 100%;
     height: 15.5%;
     background-color: #2f2f2f;
-    overflow: auto; }
-    body #wrapper footer .check {
-      width: 32px;
-      height: 32px;
+    overflow: auto;
+    position: relative; }
+    body #wrapper footer #check {
+      width: 29px;
+      height: 29px;
       border: 3px solid #000;
       background-color: #ffffff;
       float: left;
@@ -587,10 +603,18 @@ body {
       margin-top: 5%;
       margin-right: 5%;
       margin-bottom: 7%; }
+    body #wrapper footer #check1 {
+      background: url(images/check.png) no-repeat;
+      position: absolute;
+      width: 35px;
+      height: 35px;
+      top: 15%;
+      left: 5%;
+      display: none; }
     body #wrapper footer p {
       color: #757575;
       font-weight: 400;
-      font-size: 24px;
+      font-size: 4vw;
       width: 93%; }
       body #wrapper footer p a {
         color: #fff; }
@@ -600,7 +624,7 @@ body {
       width: 100%;
       color: #757575;
       font-weight: 400;
-      font-size: 24px;
+      font-size: 4vw;
       margin-left: 3%;
       width: 95%; }
 
