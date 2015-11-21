@@ -24,39 +24,52 @@ body{
 	margin: 0 auto;
 	max-width: 640px;
 	font-family: 'Roboto', sans-serif;
+	min-width: 320px;
 	#wrapper{
 		header{
 			background-color: #2f2f2f;
 			width: 100%;
-			height: 90px;
+			height: 50px;
 			display: inline-block;
+			@include small-size{
+				height: 60px;
+			}
 			.color{
 				width: 100%;
 				height: 50%;
 				background-color: #363636;
 			}
 			.age{
-				background: url(images/age.png) no-repeat;
-				width: 65px;
-				height: 65px;
-				margin-top: -32px;
+				background: url(images/age1.png) no-repeat;
+				width: 45px;
+				height: 46px;
+				margin-top: -24px;
     			float: left;
     			position: relative;
     			margin-left: 3%;
     			@include small-size{
-    				background: url(images/age1.png) no-repeat;
-    				margin-top: -22px;
+    				background: url(images/age2.png) no-repeat;
+    				margin-top: -16px;
+    			}
+    			@include medium-size{
+    				background: url(images/age2.png) no-repeat;
+    				margin-top: -16px;
     			}
 				span{
 					position: absolute;
 				    top: 28%;
 				    left: 20%;
-				    font-size: 25px;
+				    font-size: 18px;
 				    color: #fff;
 				    @include small-size{
-				    	top: 19%;
-					    left: 15%;
-					    font-size: 17px;
+				    	top: 17%;
+					    left: 10%;
+					    font-size: 15px;
+				    }
+				    @include medium-size{
+				    	top: 17%;
+					    left: 12%;
+					    font-size: 15px;
 				    }
 				}
 			}
@@ -68,46 +81,46 @@ body{
 			    left: calc(50% - 29vw);
 			    .a{
 			    	float: left;
-			    	margin-left: 24%;
-    				margin-top: -5%;
+			    	margin-left: 26%;
+    				margin-top: -3.5%;
     				@include medium-size{
-    					margin-left: 17%;
+    					margin-left: 24%;
     				}
     				@include small-size{
     					margin-left: 15%;
     				}
 					span{
-							@include medium-size{
-								font-size: 25px;
-							}
-							@include small-size{
-								font-size: 20px;
-							}
-							text-transform: uppercase;
-						    font-size: 32px;
-						    color: #fff;
-						    margin-right: 8px;
-						    font-weight: 300;
+						@include medium-size{
+							font-size: 25px;
 						}
+						@include small-size{
+							font-size: 20px;
+						}
+						text-transform: uppercase;
+					    font-size: 26px;
+					    color: #fff;
+					    margin-right: 8px;
+					    font-weight: 300;
+					}
 					.tube{
 						@include border-radius(20px);
 						background-color: #ffffff;
 						color: $bt;
 						display: inline-block;
-					    font-size: 36px;
-					    width: 93px;
-					    height: 49px;
+					    font-size: 27px;
+					    width: 75px;
+					    height: 35px;
 					    text-align: center;
-					    padding-top: 8px;
+					    padding-top: 2px;
 					    font-weight: 600;
 						@include medium-size{
 							width: 79px;
-			    			height: 41px;
+			    			height: 35px;
 			    			font-size: 25px;
 						}
 					    @include small-size{
 					    	width: 65px;
-			    			height: 32px;
+			    			height: 27px;
 			    			font-size: 20px;
 					    }
 					}
@@ -118,34 +131,44 @@ body{
 			background: #000;
 			width: 100%;
 			overflow: auto;
-			height: 73%;
+			
 			.sponge{
 				background: url(images/sponge.png) no-repeat;
 				width: 98%;
 				margin: 1% 1%;
-				height: 665px;
 				opacity: 0.7;
 				background-position: center;
     			background-size: cover;
     			-webkit-background-size:cover;
     			-o-background-size:cover;
     			-moz-background-size:cover;
+    			height: calc(100vh - 200px);
+				@include medium-size{
+					height: calc(100vh - 170px);
+				}
+				@include small-size{
+					height: calc(100vh - 170px);
+				}
 				header{
 					background-color: #000;
 					opacity: 0.5;
+					height: 60px;
 					p{
 						color: #fff;
-						font-size: 31px;
+						font-size: 25px;
 					    display: inline-block;
 					    float: left;
 					    margin-left: 6%;
 					    font-weight: 400;
-					    margin-top: 7vh;
+					    margin-top: 1vw;
+					    margin-bottom: 0;
 					    @include medium-size{
-					    	font-size: 25px;
+					    	font-size: 20px;
+					    	margin-top: 3vw;
 					    }
 					    @include small-size{
 					    	font-size: 20px;
+					    	margin-top: 5vw;
 					    }
 
 					}
@@ -153,10 +176,19 @@ body{
 						float: right;
 						position: relative;
 						margin-right: 14%;
+						margin-top: 1%;
+						@include small-size{
+							margin-top: 5vw;
+							margin-right: 10%;
+						}
+						@include medium-size{
+							margin-right: 14%;
+							margin-top: 3%;
+						}
     					a{
     						margin-left: 0;
 							.time{
-								background: url(images/time.png) no-repeat;
+								background: url(images/time1.png) no-repeat;
 								width: 45px;
 								height: 45px;
 								float: left;
@@ -167,7 +199,12 @@ body{
 				    			-o-background-size:cover;
 				    			-moz-background-size:cover;
 				    			@include small-size{
-				    				background: url(images/time1.png) no-repeat;
+				    				background: url(images/time2.png) no-repeat;
+				    				margin-right: 0;
+				    			}
+				    			@include medium-size{
+				    				background: url(images/time2.png) no-repeat;
+				    				margin-right: 0;
 				    			}
 							}
 						}
@@ -175,7 +212,7 @@ body{
     						margin-left: 0;
 						
 							.atom{
-								background: url(images/atom.png) no-repeat;
+								background: url(images/atom1.png) no-repeat;
 								width: 41px;
 								height: 47px;
 								display: inline-block;
@@ -186,7 +223,12 @@ body{
 				    			-o-background-size:cover;
 				    			-moz-background-size:cover;
 				    			@include small-size{
-				    				background: url(images/atom1.png) no-repeat;
+				    				background: url(images/atom2.png) no-repeat;
+				    				width: 24px;
+				    			}
+				    			@include medium-size{
+				    				background: url(images/atom2.png) no-repeat;
+				    				width: 24px;
 				    			}
 							}
 						}
@@ -196,34 +238,41 @@ body{
 					@include border-radius(32px);
 					background-color: $bt;
 					background-repeat: no-repeat;
-				    background-image: url(images/bt.png);
+				    background-image: url(images/bt2.png);
 				    border-color: #ff002a;
 				    max-width: 450px;
-				    min-width: 225px;
-				    width: 71vw;
-				    
+				    width: 272px;
+				 
+				    max-height: 100px;
 				    height: 50vh;
 				    
-				    margin: 30% auto 1%;
-				    background-position: 44%;
+				    margin: 2% auto 1%;
+				    background-position: 55%;
 				    display: block;
 				    @include medium-size{
-				    	background-image: url(images/bt2.png);
-				    	height: 40vh;
+				    	background-image: url(images/bt1.png);
+				    	height: 15vw;
 				    	background-position: 50%;
+				    	width: 45vw;
+				    	margin-top: 8%;
 				    }
 				    @include small-size{
-				    	height: 33vh;
+				    	height: 30vw;
 				    	background-image: url(images/bt1.png);
 				    	background-position: 60%;
 				    	margin-top: 55%;
+				    	width: 60vw;
+				    	margin-top: 8%;
 				    }
 				}
 				p{
 					text-align: center;
 					color: #bababa;
-					margin-bottom: 7%;
+					margin-bottom: 3%;
 					font-weight: 400;
+					@include medium-size{
+						font-size: 12px;
+					}
 				}
 				a{
 					text-decoration: none;
@@ -236,17 +285,24 @@ body{
 					    text-align: center;
 					    width: 20%;
 					    min-width: 67px;
-					    height: 43px;
-					    padding-top: 12px;
+					    height: 31px;
+					    padding-top: 6px;
 					    margin-left: 40%;
 					    color: #fff;
-					    font-size: 23px;
+					    font-size: 19px;
 					    float: left;
 					    font-weight: 400;
 					    @include small-size{
-					    	width: 23%;
-							font-size: 19px;
-							height: 36px;
+					    	width: 17%;
+							font-size: 15px;
+							height: 24px;
+							padding-top: 3px;
+					    }
+					    @include medium-size{
+					    	width: 17%;
+					    	font-size: 15px;
+					    	height: 24px; 
+					    	padding-top: 3px;
 					    }
 					}
 				}
@@ -254,6 +310,13 @@ body{
 			footer{
 				overflow: auto;
 				background-color: #000;
+				height: 65px;
+				@include small-size{
+					height: 60px;
+				}
+				@include medium-size{
+					height: 60px;
+				}
 				.grey{
 					width: 98%;
 					height: 3px;
@@ -268,25 +331,41 @@ body{
 					}
 				}
 				ul{
-					margin-left: 2%;
+					margin: 2%;
 					position: relative;
+					height: 35px;
+					@include small-size{
+						height: 25px;
+					}
+					@include medium-size{
+						margin: 1%;
+						margin-top: 2%;
+						height: 45px;
+						margin-bottom: 0;
+					}
 					.play{
-						background: url(images/play.png) no-repeat;
+						background: url(images/play1.png) no-repeat;
 						width: 41px;
-					    height: 45px;
+					    height: 35px;
 					    display: inline-block;
 					    margin-right: 4%;
 					    @include small-size{
-				    		background: url(images/play1.png) no-repeat;
+				    		background: url(images/play2.png) no-repeat;
+				    	}
+				    	@include medium-size{
+				    		background: url(images/play2.png) no-repeat;
 				    	}
 					}
 					.volume{
-						background: url(images/volume.png) no-repeat;
+						background: url(images/volume1.png) no-repeat;
 						display: inline-block;
 					    width: 45px;
-					    height: 45px;
+					    height: 35px;
 					    @include small-size{
-				    		background: url(images/volume1.png) no-repeat;
+				    		background: url(images/volume2.png) no-repeat;
+				    	}
+				    	@include medium-size{
+				    		background: url(images/volume2.png) no-repeat;
 				    	}
 					}
 					.sec{
@@ -296,16 +375,31 @@ body{
 					    top: 30%;
 					    width: 100px;
 					    color: #626262;
+					    @include small-size{
+					    	font-size: 12px;
+					    	margin-left: 1%;
+					    	top: 20%;
+					    }
+					    @include medium-size{
+					    	font-size: 12px;
+					    	margin-left: 1%;
+					    	top: 20%;
+					    }
 					}
 					.screen{
-						background: url(images/screen.png) no-repeat;
+						background: url(images/screen1.png) no-repeat;
 						display: inline-block;
 					    width: 55px;
-					    height: 45px;
+					    height: 35px;
 					    float: right;
     					margin-right: 5%;
     					@include small-size{
-				    		background: url(images/screen1.png) no-repeat;
+				    		background: url(images/screen2.png) no-repeat;
+				    		margin-right: 0;
+				    	}
+				    	@include medium-size{
+				    		background: url(images/screen2.png) no-repeat;
+				    		margin-right: 0;
 				    	}
 					}
 				}
@@ -317,38 +411,42 @@ body{
 			background-color: #2f2f2f;
 			overflow: auto;
 			position: relative;
+			@include small-size{
+				height: 42vw;
+			}
 			#check{
-				width: 29px;
-				height: 29px;
-				border: 3px solid #000;
+				width: 18px;
+				height: 16px;
+				border: 2px solid #000;
 				background-color: #ffffff;
 				float: left;
 				margin-left: 5%;
-			    margin-top: 5%;
+			    margin-top: 1%;
 			    margin-right: 5%;
-			    margin-bottom: 11%;
+			    margin-bottom: 0;
 			    @include small-size{
-			    	margin-bottom: 6%;
+			    	margin-bottom: 5%;
 			    }
 
 			}
-			#check1{
-				background: url(images/check.png) no-repeat;
-				position: absolute;
-				width: 35px;
-    			height: 35px;
-    			top: 15%;
-			    left: 5%;
-			    display: none;
+			.check1{
+				background: url(images/check1.png) no-repeat;
+				
+			    
 			}
 			p{
 				color: #757575;
 				font-weight: 400;
-				font-size: 24px;
+				font-size: 12px;
 				width: 93%;
 				margin-left: 3%;
+				margin-bottom: 1%;
+				margin-top: 1%;
 				@include small-size{
-					font-size: 14px;
+					font-size: 10px;
+				}
+				@include medium-size{
+					font-size: 10px;
 				}
 				a{
 					color: #fff;
@@ -361,12 +459,17 @@ body{
 				width: 100%;
 				color: #757575;
 				font-weight: 400;
-				font-size: 24px;
+				font-size: 12px;
 				margin-left: 3%;
     			width: 95%;
+    			margin-bottom: 1%;
+    			margin-top: 0%;
     			@include small-size{
-    				font-size: 14px;
+    				font-size: 10px;
     			}
+    			@include medium-size{
+					font-size: 10px;
+				}
 			}
 		}
 	}
