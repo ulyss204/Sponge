@@ -490,7 +490,7 @@ body {
           height: calc(100vh - 170px); } }
       @media (min-width: 320px) and (max-width: 449px) {
         body #wrapper main .sponge {
-          height: calc(100vh - 170px); } }
+          height: calc(100vh - 130px); } }
       body #wrapper main .sponge header {
         background-color: #000;
         opacity: 0.5;
@@ -740,9 +740,6 @@ body {
     background-color: #2f2f2f;
     overflow: auto;
     position: relative; }
-    @media (min-width: 320px) and (max-width: 449px) {
-      body #wrapper footer {
-        height: 42vw; } }
     body #wrapper footer #check {
       width: 18px;
       height: 16px;
@@ -756,8 +753,13 @@ body {
       @media (min-width: 320px) and (max-width: 449px) {
         body #wrapper footer #check {
           margin-bottom: 5%; } }
-    body #wrapper footer .check1 {
-      background: url(images/check1.png) no-repeat; }
+    body #wrapper footer #invisible {
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      left: 5%;
+      display: none;
+      cursor: pointer; }
     body #wrapper footer p {
       color: #757575;
       font-weight: 400;
